@@ -1,16 +1,38 @@
 ---
-
+import ContactForm from "@/components/ContactForm";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="A contact form, made with hopefully accessibility in mind."
+    />
+    <title>Contact Form</title>
+
+    <meta property="og:title" content="Contact Form" />
+    <meta
+      property="og:description"
+      content="A contact form, made with hopefully accessibility in mind."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+  </head>
+
+  <body
+    class="bg-primary-green-200 ~py-8/32 font-karla flex items-center justify-center px-4"
+  >
+    <ContactForm client:load />
+  </body>
 </html>
