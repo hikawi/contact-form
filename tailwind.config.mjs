@@ -24,6 +24,15 @@ export default {
       fontFamily: {
         karla: ["Karla", "sans-serif"],
       },
+      keyframes: {
+        slideDown: {
+          "0%": { transform: "translate(0, -100%)" },
+          "100%": { transform: "translate(0, 0)" },
+        },
+      },
+      animation: {
+        "slide-down": "slideDown 0.5s ease-in-out",
+      },
     },
   },
   plugins: [fluid],

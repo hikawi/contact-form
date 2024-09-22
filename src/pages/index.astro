@@ -1,5 +1,5 @@
 ---
-import ContactForm from "@/components/ContactForm";
+import ContactApp from "@/components/ContactApp";
 ---
 
 <html lang="en">
@@ -25,14 +25,12 @@ import ContactForm from "@/components/ContactForm";
     <link
       href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
     />
   </head>
 
   <body
     class="bg-primary-green-200 ~py-8/32 font-karla flex items-center justify-center px-4"
   >
-    <ContactForm client:load />
+    <ContactApp client:load />
   </body>
 </html>
