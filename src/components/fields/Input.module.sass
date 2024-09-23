@@ -1,0 +1,23 @@
+.radio
+    appearance: none
+    -webkit-appearance: none
+    @apply m-0 size-6 ring-[1px] ring-neutral-gray-500 opacity-50 rounded-full grow-0 shrink-0
+
+    &:checked
+        background-image: url("../assets/icon-radio-selected.svg")
+        @apply bg-center bg-no-repeat bg-cover ring-0 opacity-100
+
+.checkbox
+    appearance: none
+    -webkit-appearance: none
+    @apply size-6 ring-[1px] grow-0 shrink-0 ring-neutral-gray-500
+
+    &:hover
+        @apply ring-primary-green-600
+
+    &:checked
+        background-image: url("../assets/icon-checkbox-check.svg")
+        @apply bg-center bg-no-repeat bg-cover ring-transparent
+
+    &:focus
+        @apply outline-primary-green-600

@@ -1,4 +1,5 @@
 import { For, onMount, Show, type Setter } from "solid-js";
+import styles from "./Input.module.sass";
 
 const choices = ["General Enquiry", "Support Request"];
 
@@ -41,7 +42,7 @@ export default function QueryInput(props: {
                 value={choice}
                 checked={props.query === choice}
                 onChange={handleChange}
-                class="border-neutral-gray-500 checked:border-primary-green-600 checked:accent-primary-green-600 m-0 size-6 border-[1px] bg-transparent opacity-50 checked:opacity-100"
+                class={styles.radio}
                 required
               />
               <span>{choice}</span>

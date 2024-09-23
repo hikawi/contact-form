@@ -1,4 +1,5 @@
 import { onMount, Show, type Setter } from "solid-js";
+import styles from "./Input.module.sass";
 
 export default function CheckboxInput(props: {
   consent: boolean;
@@ -13,7 +14,7 @@ export default function CheckboxInput(props: {
     <div class="flex flex-col gap-2 md:col-span-2">
       <label class="mt-4 flex flex-row items-center gap-4">
         <input
-          class="border-neutral-gray-500 accent-primary-green-600 hover:border-primary-green-600 focus:outline-primary-green-600 size-6 rounded-lg border-[1px] px-6 py-3"
+          class={styles.checkbox}
           type="checkbox"
           id="consent"
           required
