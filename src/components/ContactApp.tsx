@@ -31,7 +31,7 @@ export default function ContactApp() {
   function handleSubmit(event: SubmitEvent) {
     event.preventDefault();
     setModal(true);
-    setTimeout(() => setModal(false), 3000);
+    setTimeout(() => setModal(false), 5000);
 
     setFirstName("");
     setLastName("");
@@ -43,10 +43,10 @@ export default function ContactApp() {
 
   return (
     <main class="~p-6/10 text-neutral-gray-900 w-full max-w-[46rem] rounded-2xl bg-white">
+      <Show when={modal()}>
+        <SuccessModal />
+      </Show>
       <div class="flex flex-col gap-8">
-        <Show when={modal()}>
-          <SuccessModal />
-        </Show>
         <h1 class="text-[2rem] font-bold leading-none tracking-tighter">
           Contact Us
         </h1>
@@ -54,6 +54,7 @@ export default function ContactApp() {
           class="grid grid-flow-row grid-cols-1 gap-x-4 gap-y-6 md:grid-cols-2"
           onSubmit={handleSubmit}
           novalidate
+          id="contact-form"
         >
           <NameInput name={firstName()} setName={setFirstName} />
           <NameInput name={lastName()} setName={setLastName} lastName />
